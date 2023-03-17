@@ -301,5 +301,12 @@
         The preferred color scheme for the user interface. Valid values are “default”, “prefer-dark”, “prefer-light”.
       </description>
     </key>
+    <key name="accent-color" enum="org.gnome.desktop.GDesktopAccentColor">
+      <default>'blue'</default>
+      <summary>Accent color</summary>
+      <description>
+        The preferred accent color for the user interface. Valid values are "blue", "teal", "green", "yellow", "orange", "red", "pink", "purple", "brown", "grey".
+      </description>
+    </key>
   </schema>
 </schemalist>
