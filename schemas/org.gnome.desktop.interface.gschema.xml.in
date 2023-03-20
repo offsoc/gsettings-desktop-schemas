@@ -305,7 +305,7 @@
       <default>'blue'</default>
       <summary>Accent color</summary>
       <description>
-        The preferred accent color for the user interface. Valid values are "blue", "teal", "green", "yellow", "orange", "red", "pink", "purple", "brown", "grey".
+        The preferred accent color for the user interface. Valid values are "blue", "teal", "green", "yellow", "orange", "red", "pink", "purple", "brown", "slate".
       </description>
     </key>
   </schema>
