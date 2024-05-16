@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="gsettings-desktop-schemas">
-  <schema id="org.gnome.system.proxy" path="/system/proxy/">
+  <schema id="org.gnome.system.proxy" path="/org/gnome/system/proxy/">
     <child name="http" schema="org.gnome.system.proxy.http"/>
     <child name="https" schema="org.gnome.system.proxy.https"/>
     <child name="ftp" schema="org.gnome.system.proxy.ftp"/>
@@ -18,10 +18,10 @@
         “autoconfig-url” key is used.
 
         If it is “manual”, then the proxies described by
-        “/system/proxy/http”, “/system/proxy/https”,
-        “/system/proxy/ftp” and “/system/proxy/socks” will be used.
-        Each of the 4 proxy types is enabled if its “host” key is
-        non-empty and its “port” key is non-0.
+        “/org/gnome/system/proxy/http”, “/org/gnome/system/proxy/https”,
+        “/org/gnome/system/proxy/ftp” and “/org/gnome/system/proxy/socks”
+        will be used. Each of the 4 proxy types is enabled if its “host”
+        key is non-empty and its “port” key is non-0.
 
         If an http proxy is configured, but an https proxy is not,
         then the http proxy is also used for https.
@@ -59,7 +59,7 @@
       </description>
     </key>
   </schema>
-  <schema id="org.gnome.system.proxy.http" path="/system/proxy/http/">
+  <schema id="org.gnome.system.proxy.http" path="/org/gnome/system/proxy/http/">
     <key name="enabled" type="b">
       <default>false</default>
       <summary>Unused; ignore</summary>
@@ -80,8 +80,8 @@
       <default>8080</default>
       <summary>HTTP proxy port</summary>
       <description>
-        The port on the machine defined by “/system/proxy/http/host” that you
-        proxy through.
+        The port on the machine defined by “/org/gnome/system/proxy/http/host”
+        that you proxy through.
       </description>
     </key>
     <key name="use-authentication" type="b">
@@ -90,8 +90,8 @@
       <description>
         If true, then connections to the proxy server require authentication.
         The username/password combo is defined by
-        “/system/proxy/http/authentication-user” and
-        “/system/proxy/http/authentication-password”.
+        “/org/gnome/system/proxy/http/authentication-user” and
+        “/org/gnome/system/proxy/http/authentication-password”.
 
         This applies only to the http proxy; when using a separate
         https proxy, there is currently no way to specify that it
@@ -113,7 +113,7 @@
       </description>
     </key>
   </schema>
-  <schema id="org.gnome.system.proxy.https" path="/system/proxy/https/">
+  <schema id="org.gnome.system.proxy.https" path="/org/gnome/system/proxy/https/">
     <key name="host" type="s">
       <default>''</default>
       <summary>Secure HTTP proxy host name</summary>
@@ -126,12 +126,12 @@
       <default>0</default>
       <summary>Secure HTTP proxy port</summary>
       <description>
-        The port on the machine defined by “/system/proxy/https/host” that you
-        proxy through.
+        The port on the machine defined by “/org/gnome/system/proxy/https/host”
+        that you proxy through.
       </description>
     </key>
   </schema>
-  <schema id="org.gnome.system.proxy.ftp" path="/system/proxy/ftp/">
+  <schema id="org.gnome.system.proxy.ftp" path="/org/gnome/system/proxy/ftp/">
     <key name="host" type="s">
       <default>''</default>
       <summary>FTP proxy host name</summary>
@@ -144,12 +144,12 @@
       <default>0</default>
       <summary>FTP proxy port</summary>
       <description>
-        The port on the machine defined by “/system/proxy/ftp/host” that you
-        proxy through.
+        The port on the machine defined by “/org/gnome/system/proxy/ftp/host”
+        that you proxy through.
       </description>
     </key>
   </schema>
-  <schema id="org.gnome.system.proxy.socks" path="/system/proxy/socks/">
+  <schema id="org.gnome.system.proxy.socks" path="/org/gnome/system/proxy/socks/">
     <key name="host" type="s">
       <default>''</default>
       <summary>SOCKS proxy host name</summary>
@@ -162,8 +162,8 @@
       <default>0</default>
       <summary>SOCKS proxy port</summary>
       <description>
-        The port on the machine defined by “/system/proxy/socks/host” that you
-        proxy through.
+        The port on the machine defined by “/org/gnome/system/proxy/socks/host”
+        that you proxy through.
       </description>
     </key>
   </schema>
